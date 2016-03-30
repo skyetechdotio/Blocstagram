@@ -75,6 +75,7 @@ static NSParagraphStyle *commentRightAlignStyle;
                                                                    constant:100];
         self.imageHeightConstraint.identifier = @"Image height constraint";
         
+        /*
         self.imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView
                                      attribute:NSLayoutAttributeWidth
                                      relatedBy:NSLayoutRelationEqual
@@ -82,6 +83,8 @@ static NSParagraphStyle *commentRightAlignStyle;
                                      attribute:NSLayoutAttributeNotAnAttribute
                                      multiplier:1
                                      constant:100];
+        self.imageWidthConstraint.identifier = @"Image width constraint";
+        */
         
         self.usernameAndCaptionLabelHeightConstraint = [NSLayoutConstraint constraintWithItem:_usernameAndCaptionLabel
                                                                                     attribute:NSLayoutAttributeHeight
@@ -102,7 +105,7 @@ static NSParagraphStyle *commentRightAlignStyle;
                                                                           constant:100];
         self.commentLabelHeightConstraint.identifier = @"Comment label height constraint";
         
-        [self.contentView addConstraints:@[self.imageHeightConstraint, self.imageWidthConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
+        [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
     }
     return self;
 }
