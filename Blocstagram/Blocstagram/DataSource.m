@@ -10,12 +10,14 @@
 #import "User.h"
 #import "Media.h"
 #import "Comment.h"
+#import "LoginViewController.h"
 
 
 @interface DataSource () {
     NSMutableArray *_mediaItems;
 }
 
+@property (nonatomic, strong) NSString *accessToken;
 @property (nonatomic, strong) NSArray *mediaItems;
 @property (nonatomic, assign) BOOL isRefreshing;
 @property (nonatomic, assign) BOOL isLoadingOlderItems;
@@ -23,6 +25,10 @@
 @end
 
 @implementation DataSource
+
++ (NSString *) instagramClientID {
+    return @"3410f78114644c74a90568bc24dc0719";
+}
 
 +(instancetype) sharedInstance {
     static dispatch_once_t once;
@@ -37,40 +43,64 @@
     self = [super init];
     
     if (self) {
-        [self addRandomData];
+        [self registerForAccessTokenNotification];
     }
     
     return self;
 }
 
-- (void) addRandomData {
-    NSMutableArray *randomMediaItems = [NSMutableArray array];
-    
-    for (int i = 1; i <= 10; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
-        UIImage *image = [UIImage imageNamed:imageName];
+- (void) populateDataWithParameters:(NSDictionary *)parameters {
+    if (self.accessToken) {
+        // only try to get the data if there's an access token
         
-        if (image) {
-            Media *media = [[Media alloc] init];
-            media.user = [self randomUser];
-            media.image = image;
-            media.caption = [self randomSentence];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            // do the network request in the background, so the UI doesn't lock up
             
-            NSUInteger commentCount = arc4random_uniform(10) + 2;
-            NSMutableArray *randomComments = [NSMutableArray array];
+            NSMutableString *urlString = [NSMutableString stringWithFormat:@"https://api.instagram.com/v1/users/self/feed/recent/?access_token=%@", self.accessToken];
             
-            for (int i  = 0; i <= commentCount; i++) {
-                Comment *randomComment = [self randomComment];
-                [randomComments addObject:randomComment];
+            for (NSString *parameterName in parameters) {
+                // for example, if dictionary contains {count: 50}, append `&count=50` to the URL
+                [urlString appendFormat:@"&%@=%@", parameterName, parameters[parameterName]];
             }
             
-            media.comments = randomComments;
+            NSURL *url = [NSURL URLWithString:urlString];
             
-            [randomMediaItems addObject:media];
-        }
+            if (url) {
+                NSURLRequest *request = [NSURLRequest requestWithURL:url];
+                
+                NSURLResponse *response;
+                NSError *webError;
+                NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&webError];
+                
+                if (responseData) {
+                    NSError *jsonError;
+                    NSDictionary *feedDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+                    
+                    if (feedDictionary) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            // done networking, go back on the main thread
+                            [self parseDataFromFeedDictionary:feedDictionary fromRequestWithParameters:parameters];
+                        });
+                    }
+                }
+            }
+        });
     }
-    
-    self.mediaItems = randomMediaItems;
+}
+
+- (void) parseDataFromFeedDictionary:(NSDictionary *) feedDictionary fromRequestWithParameters:(NSDictionary *)parameters {
+    NSLog(@"%@", feedDictionary);
+}
+
+- (void) registerForAccessTokenNotification {
+    [[NSNotificationCenter defaultCenter] addObserverForName:LoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.accessToken = note.object;
+        
+        // Got a token; populate the initial data
+        [self populateDataWithParameters:nil];
+        
+    }];
+
 }
 
 - (User *) randomUser {
@@ -156,13 +186,8 @@
     if (self.isRefreshing == NO) {
         self.isRefreshing = YES;
         // #2
-        Media *media = [[Media alloc] init];
-        media.user = [self randomUser];
-        media.image = [UIImage imageNamed:@"10.jpg"];
-        media.caption = [self randomSentence];
         
-        NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
-        [mutableArrayWithKVO insertObject:media atIndex:0];
+        //TODO: Add Images
         
         self.isRefreshing = NO;
         
@@ -175,13 +200,8 @@
 - (void) requestOldItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler {
     if (self.isLoadingOlderItems == NO) {
         self.isLoadingOlderItems = YES;
-        Media *media = [[Media alloc] init];
-        media.user = [self randomUser];
-        media.image = [UIImage imageNamed:@"1.jpg"];
-        media.caption = [self randomSentence];
-        
-        NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
-        [mutableArrayWithKVO addObject:media];
+       
+        //TODO: Add Images
         
         self.isLoadingOlderItems = NO;
         

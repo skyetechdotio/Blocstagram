@@ -27,6 +27,7 @@
 		888A26051CAA4F3E00793183 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26041CAA4F3E00793183 /* Comment.m */; };
 		888A26081CAA4FAD00793183 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26071CAA4FAD00793183 /* DataSource.m */; };
 		888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A260D1CAAF56000793183 /* MediaTableViewCell.m */; };
+		888A26111CAC973500793183 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26101CAC973500793183 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		888A26071CAA4FAD00793183 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		888A260C1CAAF56000793183 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
 		888A260D1CAAF56000793183 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
+		888A260F1CAC973500793183 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		888A26101CAC973500793183 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				888A26071CAA4FAD00793183 /* DataSource.m */,
 				888A260C1CAAF56000793183 /* MediaTableViewCell.h */,
 				888A260D1CAAF56000793183 /* MediaTableViewCell.m */,
+				888A260F1CAC973500793183 /* LoginViewController.h */,
+				888A26101CAC973500793183 /* LoginViewController.m */,
 				888A25911CA8A1EA00793183 /* Assets.xcassets */,
 				888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */,
 				888A25961CA8A1EA00793183 /* Info.plist */,
@@ -223,6 +228,7 @@
 				888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */,
 				888A26021CAA4EAE00793183 /* Media.m in Sources */,
 				888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */,
+				888A26111CAC973500793183 /* LoginViewController.m in Sources */,
 				888A26081CAA4FAD00793183 /* DataSource.m in Sources */,
 				888A25871CA8A1EA00793183 /* main.m in Sources */,
 				888A25FC1CA9B6DE00793183 /* ImagesTableViewController.m in Sources */,
