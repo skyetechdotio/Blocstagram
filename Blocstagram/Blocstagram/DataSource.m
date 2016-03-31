@@ -15,6 +15,7 @@
 
 @interface DataSource () {
     NSMutableArray *_mediaItems;
+    
 }
 
 @property (nonatomic, strong) NSString *accessToken;
