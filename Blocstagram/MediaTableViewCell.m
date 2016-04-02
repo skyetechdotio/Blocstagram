@@ -10,6 +10,7 @@
 #import "Media.h"
 #import "Comment.h"
 #import "User.h"
+#import "DataSource.h"
 
 
 @interface MediaTableViewCell () <UIGestureRecognizerDelegate>
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *twoFingerGestureRecognizer;
 
 @end
 
@@ -48,11 +50,16 @@ static NSParagraphStyle *commentRightAlignStyle;
         
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
-        [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        //[self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
         
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         self.longPressGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.longPressGestureRecognizer];
+        
+        self.twoFingerGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerTapFired:)];
+        self.twoFingerGestureRecognizer.numberOfTouchesRequired = 2;
+        
+        [self.mediaImageView addGestureRecognizer:self.twoFingerGestureRecognizer];
         
 
         self.usernameAndCaptionLabel = [[UILabel alloc] init];
@@ -121,6 +128,11 @@ static NSParagraphStyle *commentRightAlignStyle;
         [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
     }
     return self;
+}
+#pragma mark - Retry Downloading Image
+- (void) twoFingerTapFired:(UIGestureRecognizer *)sender {
+    [[DataSource sharedInstance] downloadImageForMediaItem:self.mediaItem];
+    
 }
  #pragma mark - Image View
 

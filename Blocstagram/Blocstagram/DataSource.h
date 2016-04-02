@@ -29,4 +29,6 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 - (void) removeObjectFromMediaItemsAtIndex:(NSUInteger)index;
 - (void) insertObject:(Media *)object inMediaItemsAtIndex:(NSUInteger)index;
 
+- (void) downloadImageForMediaItem:(Media *)mediaItem;
+
 @end
