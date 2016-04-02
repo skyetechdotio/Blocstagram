@@ -24,11 +24,11 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 - (void) requestNewItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
 - (void) requestOldItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
 
+- (void) downloadImageForMediaItem:(Media *)mediaItem;
+
 - (void) deleteMediaItem:(Media *)item;
 - (void) replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object;
 - (void) removeObjectFromMediaItemsAtIndex:(NSUInteger)index;
 - (void) insertObject:(Media *)object inMediaItemsAtIndex:(NSUInteger)index;
-
-- (void) downloadImageForMediaItem:(Media *)mediaItem;
 
 @end

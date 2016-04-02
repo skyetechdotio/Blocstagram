@@ -23,6 +23,9 @@
         
         if (standardResolutionImageURL) {
             self.mediaURL = standardResolutionImageURL;
+            self.downloadState = MediaDownloadStateNeedsImage;
+        } else {
+            self.downloadState = MediaDownloadStateNonRecoverableError;
         }
         
         NSDictionary *captionDictionary = mediaDictionary[@"caption"];
@@ -69,6 +72,13 @@
     [aCoder encodeObject:self.user forKey:NSStringFromSelector(@selector(user))];
     [aCoder encodeObject:self.mediaURL forKey:NSStringFromSelector(@selector(mediaURL))];
     [aCoder encodeObject:self.image forKey:NSStringFromSelector(@selector(image))];
+    if (self.image) {
+        self.downloadState = MediaDownloadStateHasImage;
+    } else if (self.mediaURL) {
+        self.downloadState = MediaDownloadStateNeedsImage;
+    } else {
+        self.downloadState = MediaDownloadStateNonRecoverableError;
+    }
     [aCoder encodeObject:self.caption forKey:NSStringFromSelector(@selector(caption))];
     [aCoder encodeObject:self.comments forKey:NSStringFromSelector(@selector(comments))];
 }
