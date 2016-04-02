@@ -50,6 +50,10 @@
 
 // #4
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
     [self infiniteScrollIfNecessary];
 }
 
