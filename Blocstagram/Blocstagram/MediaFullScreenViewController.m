@@ -14,6 +14,7 @@
 @property (nonatomic, strong) Media *media;
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+@property (nonatomic, strong) UIButton *shareButton;
 
 @end
 
@@ -48,6 +49,9 @@
     
     // #3
     self.scrollView.contentSize = self.media.image.size;
+    self.scrollView.userInteractionEnabled = YES;
+    self.scrollView.exclusiveTouch = YES;
+    self.scrollView.delaysContentTouches = NO;
     
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
     
@@ -58,6 +62,32 @@
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
+    self.shareButton = [[UIButton alloc] init];
+    [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
+    [self.shareButton addTarget:self action:@selector(shareButtonTapped:) forControlEvents:UIControlEventAllEvents];
+    [self.shareButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.shareButton setBackgroundColor:[UIColor whiteColor]];
+    [self.shareButton setUserInteractionEnabled:YES];
+
+    [self.scrollView addSubview:self.shareButton];
+    }
+
+
+- (void) shareButtonTapped:(UITapGestureRecognizer *)sender {
+
+    NSMutableArray *itemsToShare = [NSMutableArray array];
+
+    if (self.media.caption.length > 0) {
+        [itemsToShare addObject:self.media.caption];
+        }
+    
+    if (self.media.image) {
+        [itemsToShare addObject:self.media.image];
+        }
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
     
 }
 
@@ -76,6 +106,8 @@
     
     self.scrollView.minimumZoomScale = minScale;
     self.scrollView.maximumZoomScale = 1;
+    
+    self.shareButton.frame = CGRectMake(20, 20, 100, 20);
 }
 - (void)centerScrollView {
     [self.imageView sizeToFit];
