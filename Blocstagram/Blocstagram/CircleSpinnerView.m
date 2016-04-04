@@ -64,7 +64,7 @@
         
         CABasicAnimation *strokeStartAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
         strokeStartAnimation.fromValue = @0.015;
-        strokeStartAnimation.toValue = @0.515;
+        strokeStartAnimation.toValue = @0.800;
         
         CABasicAnimation *strokeEndAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         strokeEndAnimation.fromValue = @0.485;
@@ -124,7 +124,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.strokeThickness = 1;
-        self.radius = 12;
+        self.radius = 20;
         self.strokeColor = [UIColor purpleColor];
     }
     return self;
