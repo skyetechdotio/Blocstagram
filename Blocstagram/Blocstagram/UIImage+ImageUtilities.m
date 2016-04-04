@@ -97,7 +97,8 @@
     return img;
 }
 
-- (UIImage *) imageResizedToMatchAspectRatioOfSize:(CGSize)size {
+- (UIImage *) imageByScalingToSize:(CGSize)size andCroppingWithRect:(CGRect)rect
+{
     CGFloat horizontalRatio = size.width / self.size.width;
     CGFloat verticalRatio = size.height / self.size.height;
     CGFloat ratio = MAX(horizontalRatio, verticalRatio);
@@ -125,19 +126,15 @@
     CGContextRelease(ctx);
     CGImageRelease(newImageRef);
     
-    return newImage;
-}
+    rect.size.width *= self.scale;
+    rect.size.height *= self.scale;
+    rect.origin.x *= self.scale;
+    rect.origin.y *= self.scale;
 
-- (UIImage *) imageCroppedToRect:(CGRect)cropRect {
-    cropRect.size.width *= self.scale;
-    cropRect.size.height *= self.scale;
-    cropRect.origin.x *= self.scale;
-    cropRect.origin.y *= self.scale;
-    
-    CGImageRef imageRef = CGImageCreateWithImageInRect(self.CGImage, cropRect);
-    UIImage *image = [UIImage imageWithCGImage:imageRef scale:self.scale orientation:self.imageOrientation];
-    CGImageRelease(imageRef);
-    return image;
+    CGImageRef imageRef2 = CGImageCreateWithImageInRect(self.CGImage, rect);
+    newImage = [UIImage imageWithCGImage:imageRef scale:self.scale orientation:self.imageOrientation];
+    CGImageRelease(imageRef2);
+    return newImage;
 }
 
 @end
