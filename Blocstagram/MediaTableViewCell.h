@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LikeButton.h"
 
-@class Media, MediaTableViewCell;
+@class Media, MediaTableViewCell, ComposeCommentView;
 
 @protocol MediaTableViewCellDelegate <NSObject>
 
@@ -17,6 +17,8 @@
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView;
 - (void) cellDidPressLikeButton:(MediaTableViewCell *)cell;
 - (void) toggleLikeOnMediaItem:(Media *)mediaItem withCompletionHandler:(void (^)(void))completionHandler;
+- (void) cellWillStartComposingComment:(MediaTableViewCell *)cell;
+- (void) cell:(MediaTableViewCell *)cell didComposeComment:(NSString *)comment;
 
 @end
 
@@ -24,9 +26,13 @@
 
 @property (nonatomic, strong) Media *mediaItem;
 @property (nonatomic, weak) id <MediaTableViewCellDelegate> delegate;
+@property (nonatomic, strong, readonly) ComposeCommentView *commentView;
 @property (nonatomic, strong) LikeButton *likeButton;
 
+
 + (CGFloat) heightForMediaItem:(Media *)mediaItem width:(CGFloat)width;
+
+- (void) stopComposingComment;
 
 
 @end
