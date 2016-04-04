@@ -72,6 +72,16 @@ static NSParagraphStyle *commentRightAlignStyle;
         
         self.commentView = [[ComposeCommentView alloc] init];
         self.commentView.delegate = self;
+        self.commentView.backgroundColor = [UIColor blueColor];
+        
+        [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionBeginFromCurrentState
+         animations:^{
+             }
+         completion:^(BOOL finished) {
+             self.commentLabel.backgroundColor = commentLabelGray;
+            }];
+        
+        self.commentView.frame = CGRectMake(self.commentView.frame.origin.x, self.commentView.frame.origin.y, self.commentView.frame.size.width*2.0, self.commentView.frame.size.height);
         
         self.commentLabel = [[UILabel alloc] init];
         self.commentLabel.numberOfLines = 0;
