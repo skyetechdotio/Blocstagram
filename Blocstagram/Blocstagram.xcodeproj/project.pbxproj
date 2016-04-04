@@ -30,6 +30,9 @@
 		888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A260D1CAAF56000793183 /* MediaTableViewCell.m */; };
 		888A26111CAC973500793183 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26101CAC973500793183 /* LoginViewController.m */; };
 		8891AC001CB2E5F5001ACD47 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */; };
+		8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */; };
+		8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC051CB2F0B9001ACD47 /* CameraViewController.m */; };
+		8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */; };
 		88C4BB901CAFBC9F00142957 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */; };
 		88C4BB931CB2210900142957 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB921CB2210900142957 /* CircleSpinnerView.m */; };
 		88C4BB961CB2A90300142957 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB951CB2A90300142957 /* LikeButton.m */; };
@@ -71,6 +74,12 @@
 		888A26101CAC973500793183 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8891ABFE1CB2E5F5001ACD47 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
+		8891AC011CB2EFD5001ACD47 /* CameraToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToolbar.h; sourceTree = "<group>"; };
+		8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToolbar.m; sourceTree = "<group>"; };
+		8891AC041CB2F0B9001ACD47 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		8891AC051CB2F0B9001ACD47 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
+		8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
 		88C4BB8E1CAFBC9F00142957 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		88C4BB911CB2210900142957 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
@@ -155,6 +164,12 @@
 				88C4BB951CB2A90300142957 /* LikeButton.m */,
 				8891ABFE1CB2E5F5001ACD47 /* ComposeCommentView.h */,
 				8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */,
+				8891AC011CB2EFD5001ACD47 /* CameraToolbar.h */,
+				8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */,
+				8891AC041CB2F0B9001ACD47 /* CameraViewController.h */,
+				8891AC051CB2F0B9001ACD47 /* CameraViewController.m */,
+				8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */,
+				8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */,
 				888A25911CA8A1EA00793183 /* Assets.xcassets */,
 				888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */,
 				888A25961CA8A1EA00793183 /* Info.plist */,
@@ -324,12 +339,15 @@
 				888A26051CAA4F3E00793183 /* Comment.m in Sources */,
 				888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */,
 				888A26021CAA4EAE00793183 /* Media.m in Sources */,
+				8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */,
 				888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */,
 				888A26111CAC973500793183 /* LoginViewController.m in Sources */,
 				88C4BB961CB2A90300142957 /* LikeButton.m in Sources */,
 				888A26081CAA4FAD00793183 /* DataSource.m in Sources */,
 				8891AC001CB2E5F5001ACD47 /* ComposeCommentView.m in Sources */,
 				888A25871CA8A1EA00793183 /* main.m in Sources */,
+				8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */,
+				8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */,
 				888A25FC1CA9B6DE00793183 /* ImagesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
