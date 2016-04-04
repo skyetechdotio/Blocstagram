@@ -9,6 +9,7 @@
 #import "Media.h"
 #import "User.h"
 #import "Comment.h"
+#import "LikeButton.h"
 
 @implementation Media
 
@@ -16,6 +17,8 @@
     self = [super init];
     
     if (self) {
+        self.likeCount = [mediaDictionary[@"likes"][@"count"] integerValue];
+        NSLog(@"like count: %ld",(long)self.likeCount);
         self.idNumber = mediaDictionary[@"id"];
         self.user = [[User alloc] initWithDictionary:mediaDictionary[@"user"]];
         NSString *standardResolutionImageURLString = mediaDictionary[@"images"][@"standard_resolution"][@"url"];
@@ -43,7 +46,7 @@
             Comment *comment = [[Comment alloc] initWithDictionary:commentDictionary];
             [commentsArray addObject:comment];
         }
-        
+        NSLog(@"mediaDictionary: %@",mediaDictionary[@"comments"][@"data"]);
         self.comments = commentsArray;
         
         BOOL userHasLiked = [mediaDictionary[@"user_has_liked"] boolValue];
@@ -67,6 +70,7 @@
         self.caption = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(caption))];
         self.comments = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(comments))];
         self.likeState = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(likeState))];
+        self.likeCount = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(likeCount))];
     }
     
     return self;
@@ -87,6 +91,7 @@
     [aCoder encodeObject:self.caption forKey:NSStringFromSelector(@selector(caption))];
     [aCoder encodeObject:self.comments forKey:NSStringFromSelector(@selector(comments))];
     [aCoder encodeInteger:self.likeState forKey:NSStringFromSelector(@selector(likeState))];
+    [aCoder encodeInteger:self.likeCount forKey:NSStringFromSelector(@selector(likeCount))];
 }
 
 @end

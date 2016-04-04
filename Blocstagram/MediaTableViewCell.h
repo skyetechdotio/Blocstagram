@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LikeButton.h"
 
 @class Media, MediaTableViewCell;
 
@@ -23,6 +24,7 @@
 
 @property (nonatomic, strong) Media *mediaItem;
 @property (nonatomic, weak) id <MediaTableViewCellDelegate> delegate;
+@property (nonatomic, strong) LikeButton *likeButton;
 
 + (CGFloat) heightForMediaItem:(Media *)mediaItem width:(CGFloat)width;
 

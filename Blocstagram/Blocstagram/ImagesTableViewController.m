@@ -158,6 +158,9 @@
     cell.delegate = self;
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     
+    cell.likeButton.likeButtonState = cell.mediaItem.likeState;
+    cell.likeButton.likeCount = cell.mediaItem.likeCount;
+    
     return cell;
 }
 

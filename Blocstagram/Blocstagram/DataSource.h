@@ -20,6 +20,7 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 
 @property (nonatomic, strong, readonly) NSArray *mediaItems;
 @property (nonatomic, strong, readonly) NSString *accessToken;
+@property (nonatomic, strong, readonly) NSArray *likesItems;
 
 - (void) requestNewItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
 - (void) requestOldItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;

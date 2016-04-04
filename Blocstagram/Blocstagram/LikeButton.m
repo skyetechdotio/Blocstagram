@@ -8,6 +8,7 @@
 
 #import "LikeButton.h"
 #import "CircleSpinnerView.h"
+#import "Media.h"
 
 #define kLikedStateImage @"heart-full"
 #define kUnlikedStateImage @"heart-empty"
@@ -15,6 +16,7 @@
 @interface LikeButton ()
 
 @property (nonatomic, strong) CircleSpinnerView *spinnerView;
+@property (nonatomic, strong) UILabel *likesLabel;
 
 @end
 
@@ -25,6 +27,15 @@
     
     if (self) {
         self.spinnerView = [[CircleSpinnerView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        self.likesLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        [self addSubview:self.spinnerView];
+        [self addSubview:self.likesLabel];
+        
+        //self.likesLabel.text = @"hi";
+        //self.likesLabel.backgroundColor = [UIColor whiteColor];
+        self.likesLabel.textAlignment = NSTextAlignmentRight;
+        self.likesLabel.font = [UIFont systemFontOfSize:12];
+        
         [self addSubview:self.spinnerView];
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -41,6 +52,7 @@
 - (void) layoutSubviews {
     [super layoutSubviews];
     self.spinnerView.frame = self.imageView.frame;
+    self.likesLabel.frame = CGRectMake(self.imageView.frame.size.width - 55, 0, 36, 36);
 }
 
 - (void) setLikeButtonState:(LikeState)likeState {
@@ -51,11 +63,13 @@
     switch (_likeButtonState) {
         case LikeStateLiked:
         case LikeStateUnliking:
+            self.likesLabel.text = [NSString stringWithFormat:@"%ld",self.likeCount];
             imageName = kLikedStateImage;
             break;
             
         case LikeStateNotLiked:
         case LikeStateLiking:
+            self.likesLabel.text = [NSString stringWithFormat:@"%ld",self.likeCount];
             imageName = kUnlikedStateImage;
     }
     

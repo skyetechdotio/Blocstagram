@@ -17,6 +17,7 @@
 
 @interface DataSource () {
     NSMutableArray *_mediaItems;
+    NSMutableArray *_likesItems;
     
 }
 
@@ -109,8 +110,10 @@
 
 - (void) parseDataFromFeedDictionary:(NSDictionary *) feedDictionary fromRequestWithParameters:(NSDictionary *)parameters {
     NSArray *mediaArray = feedDictionary[@"data"];
+    NSArray *likesArray = feedDictionary[@"likes"];
     
     NSMutableArray *tmpMediaItems = [NSMutableArray array];
+    NSMutableArray *tmpLikesItems = [NSMutableArray array];
     
     for (NSDictionary *mediaDictionary in mediaArray) {
         Media *mediaItem = [[Media alloc] initWithDictionary:mediaDictionary];
@@ -119,6 +122,12 @@
             [tmpMediaItems addObject:mediaItem];
         }
     }
+    
+    for (NSDictionary *likesDictionary in likesArray) {
+        Media *likesItem = [[Media alloc] initWithDictionary:likesDictionary];
+        [tmpLikesItems addObject:likesItem];
+        NSLog(@"%@",tmpLikesItems);
+        }
     
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
     
@@ -376,6 +385,7 @@
     if (mediaItem.likeState == LikeStateNotLiked) {
         
         mediaItem.likeState = LikeStateLiking;
+        mediaItem.likeCount++;
         
         [self.instagramOperationManager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             mediaItem.likeState = LikeStateLiked;
@@ -394,6 +404,7 @@
     } else if (mediaItem.likeState == LikeStateLiked) {
         
         mediaItem.likeState = LikeStateUnliking;
+        mediaItem.likeCount--;
         
         [self.instagramOperationManager DELETE:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             mediaItem.likeState = LikeStateNotLiked;
