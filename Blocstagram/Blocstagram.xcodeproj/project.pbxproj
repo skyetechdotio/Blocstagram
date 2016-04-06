@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0206F6A333F3C48394BF27BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DF35FCF1D8573E671F46B7 /* libPods.a */; };
 		8819A2DE1CB4CEA3006E333B /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2DD1CB4CEA3006E333B /* UserTests.m */; };
+		8819A2E11CB4CEE1006E333B /* CommentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2DF1CB4CEE1006E333B /* CommentTest.m */; };
+		8819A2E21CB4CEE1006E333B /* MediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2E01CB4CEE1006E333B /* MediaTests.m */; };
 		888A25871CA8A1EA00793183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25861CA8A1EA00793183 /* main.m */; };
 		888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25891CA8A1EA00793183 /* AppDelegate.m */; };
 		888A25921CA8A1EA00793183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888A25911CA8A1EA00793183 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		39DF35FCF1D8573E671F46B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		487F6869195A3552C3BEA289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8819A2DD1CB4CEA3006E333B /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		8819A2DF1CB4CEE1006E333B /* CommentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTest.m; sourceTree = "<group>"; };
+		8819A2E01CB4CEE1006E333B /* MediaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTests.m; sourceTree = "<group>"; };
 		888A25821CA8A1EA00793183 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888A25861CA8A1EA00793183 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		888A25881CA8A1EA00793183 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		8819A2DC1CB4CE70006E333B /* Blocstagram Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8819A2DF1CB4CEE1006E333B /* CommentTest.m */,
+				8819A2E01CB4CEE1006E333B /* MediaTests.m */,
 				8819A2DD1CB4CEA3006E333B /* UserTests.m */,
 			);
 			name = "Blocstagram Tests";
@@ -388,9 +394,11 @@
 				8891AC001CB2E5F5001ACD47 /* ComposeCommentView.m in Sources */,
 				888A25871CA8A1EA00793183 /* main.m in Sources */,
 				8891AC1B1CB4B46E001ACD47 /* LibraryCollectionViewCell.m in Sources */,
+				8819A2E21CB4CEE1006E333B /* MediaTests.m in Sources */,
 				8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */,
 				8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */,
 				8819A2DE1CB4CEA3006E333B /* UserTests.m in Sources */,
+				8819A2E11CB4CEE1006E333B /* CommentTest.m in Sources */,
 				888A25FC1CA9B6DE00793183 /* ImagesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
