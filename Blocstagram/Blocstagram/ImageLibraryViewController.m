@@ -47,14 +47,19 @@
     [super viewWillLayoutSubviews];
     
     CGFloat width = CGRectGetWidth(self.view.frame);
-    CGFloat minWidth = 100;
+    NSLog(@"%f",width);
+    CGFloat minWidth = (width/4)-19;
+    NSLog(@"%f",minWidth);
     NSInteger divisor = width / minWidth;
+    NSLog(@"%ld",(long)divisor);
     CGFloat cellSize = width / divisor;
+    NSLog(@"%f",cellSize);
+    NSLog(@"%f",width-(cellSize*4));
     
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     flowLayout.itemSize = CGSizeMake(cellSize, cellSize);
-    flowLayout.minimumInteritemSpacing = 0;
-    flowLayout.minimumLineSpacing = 0;
+    flowLayout.minimumInteritemSpacing = 5;
+    flowLayout.minimumLineSpacing = 5;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -76,7 +81,7 @@
 
 - (void) loadAssets {
     PHFetchOptions *options = [[PHFetchOptions alloc] init];
-    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     
     self.result = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:options];
 }
