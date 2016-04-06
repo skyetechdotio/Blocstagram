@@ -33,6 +33,9 @@
 		8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */; };
 		8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC051CB2F0B9001ACD47 /* CameraViewController.m */; };
 		8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */; };
+		8891AC0C1CB302FA001ACD47 /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC0B1CB302FA001ACD47 /* CropBox.m */; };
+		8891AC0F1CB3056D001ACD47 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */; };
+		8891AC121CB44C7A001ACD47 /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */; };
 		88C4BB901CAFBC9F00142957 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */; };
 		88C4BB931CB2210900142957 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB921CB2210900142957 /* CircleSpinnerView.m */; };
 		88C4BB961CB2A90300142957 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB951CB2A90300142957 /* LikeButton.m */; };
@@ -80,6 +83,12 @@
 		8891AC051CB2F0B9001ACD47 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
 		8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
+		8891AC0A1CB302FA001ACD47 /* CropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropBox.h; sourceTree = "<group>"; };
+		8891AC0B1CB302FA001ACD47 /* CropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropBox.m; sourceTree = "<group>"; };
+		8891AC0D1CB3056D001ACD47 /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
+		8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
+		8891AC101CB44C7A001ACD47 /* ImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLibraryViewController.h; sourceTree = "<group>"; };
+		8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		88C4BB8E1CAFBC9F00142957 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		88C4BB911CB2210900142957 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
@@ -170,6 +179,12 @@
 				8891AC051CB2F0B9001ACD47 /* CameraViewController.m */,
 				8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */,
 				8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */,
+				8891AC0A1CB302FA001ACD47 /* CropBox.h */,
+				8891AC0B1CB302FA001ACD47 /* CropBox.m */,
+				8891AC0D1CB3056D001ACD47 /* CropImageViewController.h */,
+				8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */,
+				8891AC101CB44C7A001ACD47 /* ImageLibraryViewController.h */,
+				8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */,
 				888A25911CA8A1EA00793183 /* Assets.xcassets */,
 				888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */,
 				888A25961CA8A1EA00793183 /* Info.plist */,
@@ -337,7 +352,10 @@
 				88C4BB931CB2210900142957 /* CircleSpinnerView.m in Sources */,
 				888A25FF1CAA4E5F00793183 /* User.m in Sources */,
 				888A26051CAA4F3E00793183 /* Comment.m in Sources */,
+				8891AC121CB44C7A001ACD47 /* ImageLibraryViewController.m in Sources */,
+				8891AC0C1CB302FA001ACD47 /* CropBox.m in Sources */,
 				888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */,
+				8891AC0F1CB3056D001ACD47 /* CropImageViewController.m in Sources */,
 				888A26021CAA4EAE00793183 /* Media.m in Sources */,
 				8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */,
 				888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */,
