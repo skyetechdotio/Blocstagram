@@ -28,9 +28,10 @@
 @property (nonatomic, weak) id <MediaTableViewCellDelegate> delegate;
 @property (nonatomic, strong, readonly) ComposeCommentView *commentView;
 @property (nonatomic, strong) LikeButton *likeButton;
+@property (nonatomic, strong) UITraitCollection *overrideTraitCollection;
 
 
-+ (CGFloat) heightForMediaItem:(Media *)mediaItem width:(CGFloat)width;
++ (CGFloat) heightForMediaItem:(Media *)mediaItem width:(CGFloat)width traitCollection:(UITraitCollection *) traitCollection;
 
 - (void) stopComposingComment;
 
