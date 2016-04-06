@@ -10,6 +10,7 @@
 #import <Photos/Photos.h>
 #import "CropImageViewController.h"
 
+
 @interface ImageLibraryViewController () <CropImageViewControllerDelegate>
 
 @property (nonatomic, strong) PHFetchResult *result;
@@ -30,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerClass:[LibraryCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
@@ -95,20 +96,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSInteger imageViewTag = 54321;
-    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
-    
-    if (!imageView) {
-        imageView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
-        imageView.tag = imageViewTag;
-        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-        imageView.clipsToBounds = YES;
-        [cell.contentView addSubview:imageView];
-    }
+   
+    LibraryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     if (cell.tag != 0) {
         [[PHImageManager defaultManager] cancelImageRequest:(PHImageRequestID)cell.tag];
@@ -118,11 +107,10 @@
     PHAsset *asset = self.result[indexPath.row];
     
     cell.tag = [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:flowLayout.itemSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage *result, NSDictionary *info) {
-        UICollectionViewCell *cellToUpdate = [collectionView cellForItemAtIndexPath:indexPath];
+        LibraryCollectionViewCell *cellToUpdate = (LibraryCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
         
         if (cellToUpdate) {
-            UIImageView *imageView = (UIImageView *)[cellToUpdate.contentView viewWithTag:imageViewTag];
-            imageView.image = result;
+            cellToUpdate.imageView.image = result;
         }
     }];
     
