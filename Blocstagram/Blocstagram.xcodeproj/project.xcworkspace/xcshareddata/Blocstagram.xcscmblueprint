@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F13327B39E3F1D6F798148CB76F45DB7D42E6F4C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F13327B39E3F1D6F798148CB76F45DB7D42E6F4C" : 0,
+    "BBEF54CE3791DA9AF2DC0331E64250C64C0FA17E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0DE920E7-6FC4-463D-97D2-05B7DA25CAF5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F13327B39E3F1D6F798148CB76F45DB7D42E6F4C" : "Blocstagram\/",
+    "BBEF54CE3791DA9AF2DC0331E64250C64C0FA17E" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Blocstagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Blocstagram\/Blocstagram.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shadylane318\/Bloc-Training.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BBEF54CE3791DA9AF2DC0331E64250C64C0FA17E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shadylane318\/Blocstagram.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F13327B39E3F1D6F798148CB76F45DB7D42E6F4C"
+    }
+  ]
+}

@@ -7,25 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0206F6A333F3C48394BF27BF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DF35FCF1D8573E671F46B7 /* libPods.a */; };
+		8819A2DE1CB4CEA3006E333B /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819A2DD1CB4CEA3006E333B /* UserTests.m */; };
 		888A25871CA8A1EA00793183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25861CA8A1EA00793183 /* main.m */; };
 		888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25891CA8A1EA00793183 /* AppDelegate.m */; };
-		888A258D1CA8A1EA00793183 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A258C1CA8A1EA00793183 /* ViewController.m */; };
-		888A25901CA8A1EA00793183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A258E1CA8A1EA00793183 /* Main.storyboard */; };
 		888A25921CA8A1EA00793183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888A25911CA8A1EA00793183 /* Assets.xcassets */; };
 		888A25951CA8A1EA00793183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */; };
+		888A25F01CA9B6A100793183 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25E61CA9B6A100793183 /* 1.jpg */; };
+		888A25F11CA9B6A100793183 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25E71CA9B6A100793183 /* 2.jpg */; };
+		888A25F21CA9B6A100793183 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25E81CA9B6A100793183 /* 3.jpg */; };
+		888A25F31CA9B6A100793183 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25E91CA9B6A100793183 /* 4.jpg */; };
+		888A25F41CA9B6A100793183 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25EA1CA9B6A100793183 /* 5.jpg */; };
+		888A25F51CA9B6A100793183 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25EB1CA9B6A100793183 /* 6.jpg */; };
+		888A25F61CA9B6A100793183 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25EC1CA9B6A100793183 /* 7.jpg */; };
+		888A25F71CA9B6A100793183 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25ED1CA9B6A100793183 /* 8.jpg */; };
+		888A25F81CA9B6A100793183 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25EE1CA9B6A100793183 /* 9.jpg */; };
+		888A25F91CA9B6A100793183 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888A25EF1CA9B6A100793183 /* 10.jpg */; };
+		888A25FC1CA9B6DE00793183 /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25FB1CA9B6DE00793183 /* ImagesTableViewController.m */; };
+		888A25FF1CAA4E5F00793183 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A25FE1CAA4E5F00793183 /* User.m */; };
+		888A26021CAA4EAE00793183 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26011CAA4EAE00793183 /* Media.m */; };
+		888A26051CAA4F3E00793183 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26041CAA4F3E00793183 /* Comment.m */; };
+		888A26081CAA4FAD00793183 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26071CAA4FAD00793183 /* DataSource.m */; };
+		888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A260D1CAAF56000793183 /* MediaTableViewCell.m */; };
+		888A26111CAC973500793183 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A26101CAC973500793183 /* LoginViewController.m */; };
+		8891AC001CB2E5F5001ACD47 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */; };
+		8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */; };
+		8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC051CB2F0B9001ACD47 /* CameraViewController.m */; };
+		8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */; };
+		8891AC0C1CB302FA001ACD47 /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC0B1CB302FA001ACD47 /* CropBox.m */; };
+		8891AC0F1CB3056D001ACD47 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */; };
+		8891AC121CB44C7A001ACD47 /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */; };
+		8891AC151CB4AB73001ACD47 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC141CB4AB73001ACD47 /* PostToInstagramViewController.m */; };
+		8891AC1B1CB4B46E001ACD47 /* LibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8891AC1A1CB4B46E001ACD47 /* LibraryCollectionViewCell.m */; };
+		88C4BB901CAFBC9F00142957 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */; };
+		88C4BB931CB2210900142957 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB921CB2210900142957 /* CircleSpinnerView.m */; };
+		88C4BB961CB2A90300142957 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4BB951CB2A90300142957 /* LikeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39DF35FCF1D8573E671F46B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		487F6869195A3552C3BEA289 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8819A2DD1CB4CEA3006E333B /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		888A25821CA8A1EA00793183 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888A25861CA8A1EA00793183 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		888A25881CA8A1EA00793183 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		888A25891CA8A1EA00793183 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		888A258B1CA8A1EA00793183 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		888A258C1CA8A1EA00793183 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		888A258F1CA8A1EA00793183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		888A25911CA8A1EA00793183 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888A25941CA8A1EA00793183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888A25961CA8A1EA00793183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888A25E61CA9B6A100793183 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		888A25E71CA9B6A100793183 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		888A25E81CA9B6A100793183 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		888A25E91CA9B6A100793183 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		888A25EA1CA9B6A100793183 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		888A25EB1CA9B6A100793183 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		888A25EC1CA9B6A100793183 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		888A25ED1CA9B6A100793183 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		888A25EE1CA9B6A100793183 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		888A25EF1CA9B6A100793183 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		888A25FA1CA9B6DE00793183 /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
+		888A25FB1CA9B6DE00793183 /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
+		888A25FD1CAA4E5F00793183 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		888A25FE1CAA4E5F00793183 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		888A26001CAA4EAE00793183 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		888A26011CAA4EAE00793183 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		888A26031CAA4F3E00793183 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		888A26041CAA4F3E00793183 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		888A26061CAA4FAD00793183 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		888A26071CAA4FAD00793183 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		888A260C1CAAF56000793183 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
+		888A260D1CAAF56000793183 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
+		888A260F1CAC973500793183 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		888A26101CAC973500793183 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8891ABFE1CB2E5F5001ACD47 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
+		8891AC011CB2EFD5001ACD47 /* CameraToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToolbar.h; sourceTree = "<group>"; };
+		8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToolbar.m; sourceTree = "<group>"; };
+		8891AC041CB2F0B9001ACD47 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		8891AC051CB2F0B9001ACD47 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
+		8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
+		8891AC0A1CB302FA001ACD47 /* CropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropBox.h; sourceTree = "<group>"; };
+		8891AC0B1CB302FA001ACD47 /* CropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropBox.m; sourceTree = "<group>"; };
+		8891AC0D1CB3056D001ACD47 /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
+		8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
+		8891AC101CB44C7A001ACD47 /* ImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLibraryViewController.h; sourceTree = "<group>"; };
+		8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
+		8891AC131CB4AB73001ACD47 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToInstagramViewController.h; sourceTree = "<group>"; };
+		8891AC141CB4AB73001ACD47 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToInstagramViewController.m; sourceTree = "<group>"; };
+		8891AC191CB4B46E001ACD47 /* LibraryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCollectionViewCell.h; sourceTree = "<group>"; };
+		8891AC1A1CB4B46E001ACD47 /* LibraryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCollectionViewCell.m; sourceTree = "<group>"; };
+		88C4BB8E1CAFBC9F00142957 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
+		88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
+		88C4BB911CB2210900142957 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
+		88C4BB921CB2210900142957 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpinnerView.m; sourceTree = "<group>"; };
+		88C4BB941CB2A90300142957 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		88C4BB951CB2A90300142957 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
+		EB3E9066A261EFA6DF85A357 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +111,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0206F6A333F3C48394BF27BF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16D39442002DB1EB190E6320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB3E9066A261EFA6DF85A357 /* Pods.debug.xcconfig */,
+				487F6869195A3552C3BEA289 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6ED6C726D7356191CDF46F8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39DF35FCF1D8573E671F46B7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8819A2DC1CB4CE70006E333B /* Blocstagram Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8819A2DD1CB4CEA3006E333B /* UserTests.m */,
+			);
+			name = "Blocstagram Tests";
+			path = Blocstagram;
+			sourceTree = "<group>";
+		};
 		888A25791CA8A1EA00793183 = {
 			isa = PBXGroup;
 			children = (
+				8819A2DC1CB4CE70006E333B /* Blocstagram Tests */,
 				888A25841CA8A1EA00793183 /* Blocstagram */,
 				888A25831CA8A1EA00793183 /* Products */,
+				16D39442002DB1EB190E6320 /* Pods */,
+				6ED6C726D7356191CDF46F8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +166,47 @@
 		888A25841CA8A1EA00793183 /* Blocstagram */ = {
 			isa = PBXGroup;
 			children = (
+				888A25E51CA9B68900793183 /* Images */,
 				888A25881CA8A1EA00793183 /* AppDelegate.h */,
 				888A25891CA8A1EA00793183 /* AppDelegate.m */,
-				888A258B1CA8A1EA00793183 /* ViewController.h */,
-				888A258C1CA8A1EA00793183 /* ViewController.m */,
-				888A258E1CA8A1EA00793183 /* Main.storyboard */,
+				888A25FA1CA9B6DE00793183 /* ImagesTableViewController.h */,
+				888A25FB1CA9B6DE00793183 /* ImagesTableViewController.m */,
+				888A25FD1CAA4E5F00793183 /* User.h */,
+				888A25FE1CAA4E5F00793183 /* User.m */,
+				888A26001CAA4EAE00793183 /* Media.h */,
+				888A26011CAA4EAE00793183 /* Media.m */,
+				888A26031CAA4F3E00793183 /* Comment.h */,
+				888A26041CAA4F3E00793183 /* Comment.m */,
+				888A26061CAA4FAD00793183 /* DataSource.h */,
+				888A26071CAA4FAD00793183 /* DataSource.m */,
+				888A260C1CAAF56000793183 /* MediaTableViewCell.h */,
+				888A260D1CAAF56000793183 /* MediaTableViewCell.m */,
+				888A260F1CAC973500793183 /* LoginViewController.h */,
+				888A26101CAC973500793183 /* LoginViewController.m */,
+				88C4BB8E1CAFBC9F00142957 /* MediaFullScreenViewController.h */,
+				88C4BB8F1CAFBC9F00142957 /* MediaFullScreenViewController.m */,
+				88C4BB911CB2210900142957 /* CircleSpinnerView.h */,
+				88C4BB921CB2210900142957 /* CircleSpinnerView.m */,
+				88C4BB941CB2A90300142957 /* LikeButton.h */,
+				88C4BB951CB2A90300142957 /* LikeButton.m */,
+				8891ABFE1CB2E5F5001ACD47 /* ComposeCommentView.h */,
+				8891ABFF1CB2E5F5001ACD47 /* ComposeCommentView.m */,
+				8891AC011CB2EFD5001ACD47 /* CameraToolbar.h */,
+				8891AC021CB2EFD5001ACD47 /* CameraToolbar.m */,
+				8891AC041CB2F0B9001ACD47 /* CameraViewController.h */,
+				8891AC051CB2F0B9001ACD47 /* CameraViewController.m */,
+				8891AC071CB2F31C001ACD47 /* UIImage+ImageUtilities.h */,
+				8891AC081CB2F31C001ACD47 /* UIImage+ImageUtilities.m */,
+				8891AC0A1CB302FA001ACD47 /* CropBox.h */,
+				8891AC0B1CB302FA001ACD47 /* CropBox.m */,
+				8891AC0D1CB3056D001ACD47 /* CropImageViewController.h */,
+				8891AC0E1CB3056D001ACD47 /* CropImageViewController.m */,
+				8891AC101CB44C7A001ACD47 /* ImageLibraryViewController.h */,
+				8891AC111CB44C7A001ACD47 /* ImageLibraryViewController.m */,
+				8891AC131CB4AB73001ACD47 /* PostToInstagramViewController.h */,
+				8891AC141CB4AB73001ACD47 /* PostToInstagramViewController.m */,
+				8891AC191CB4B46E001ACD47 /* LibraryCollectionViewCell.h */,
+				8891AC1A1CB4B46E001ACD47 /* LibraryCollectionViewCell.m */,
 				888A25911CA8A1EA00793183 /* Assets.xcassets */,
 				888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */,
 				888A25961CA8A1EA00793183 /* Info.plist */,
@@ -79,6 +223,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		888A25E51CA9B68900793183 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				888A25E61CA9B6A100793183 /* 1.jpg */,
+				888A25E71CA9B6A100793183 /* 2.jpg */,
+				888A25E81CA9B6A100793183 /* 3.jpg */,
+				888A25E91CA9B6A100793183 /* 4.jpg */,
+				888A25EA1CA9B6A100793183 /* 5.jpg */,
+				888A25EB1CA9B6A100793183 /* 6.jpg */,
+				888A25EC1CA9B6A100793183 /* 7.jpg */,
+				888A25ED1CA9B6A100793183 /* 8.jpg */,
+				888A25EE1CA9B6A100793183 /* 9.jpg */,
+				888A25EF1CA9B6A100793183 /* 10.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888A25991CA8A1EA00793183 /* Build configuration list for PBXNativeTarget "Blocstagram" */;
 			buildPhases = (
+				0591185C033C33EB03F83E24 /* Check Pods Manifest.lock */,
 				888A257E1CA8A1EA00793183 /* Sources */,
 				888A257F1CA8A1EA00793183 /* Frameworks */,
 				888A25801CA8A1EA00793183 /* Resources */,
+				A0036DAA0A48A078DD77F3D3 /* Embed Pods Frameworks */,
+				67A65FC315F39DD16E638C1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,36 +300,104 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888A25F81CA9B6A100793183 /* 9.jpg in Resources */,
+				888A25F71CA9B6A100793183 /* 8.jpg in Resources */,
+				888A25F31CA9B6A100793183 /* 4.jpg in Resources */,
+				888A25F21CA9B6A100793183 /* 3.jpg in Resources */,
+				888A25F51CA9B6A100793183 /* 6.jpg in Resources */,
+				888A25F01CA9B6A100793183 /* 1.jpg in Resources */,
 				888A25951CA8A1EA00793183 /* LaunchScreen.storyboard in Resources */,
+				888A25F41CA9B6A100793183 /* 5.jpg in Resources */,
+				888A25F61CA9B6A100793183 /* 7.jpg in Resources */,
+				888A25F11CA9B6A100793183 /* 2.jpg in Resources */,
+				888A25F91CA9B6A100793183 /* 10.jpg in Resources */,
 				888A25921CA8A1EA00793183 /* Assets.xcassets in Resources */,
-				888A25901CA8A1EA00793183 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0591185C033C33EB03F83E24 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67A65FC315F39DD16E638C1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0036DAA0A48A078DD77F3D3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		888A257E1CA8A1EA00793183 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888A258D1CA8A1EA00793183 /* ViewController.m in Sources */,
+				88C4BB901CAFBC9F00142957 /* MediaFullScreenViewController.m in Sources */,
+				88C4BB931CB2210900142957 /* CircleSpinnerView.m in Sources */,
+				888A25FF1CAA4E5F00793183 /* User.m in Sources */,
+				888A26051CAA4F3E00793183 /* Comment.m in Sources */,
+				8891AC121CB44C7A001ACD47 /* ImageLibraryViewController.m in Sources */,
+				8891AC0C1CB302FA001ACD47 /* CropBox.m in Sources */,
+				888A260E1CAAF56000793183 /* MediaTableViewCell.m in Sources */,
+				8891AC0F1CB3056D001ACD47 /* CropImageViewController.m in Sources */,
+				888A26021CAA4EAE00793183 /* Media.m in Sources */,
+				8891AC031CB2EFD5001ACD47 /* CameraToolbar.m in Sources */,
 				888A258A1CA8A1EA00793183 /* AppDelegate.m in Sources */,
+				888A26111CAC973500793183 /* LoginViewController.m in Sources */,
+				8891AC151CB4AB73001ACD47 /* PostToInstagramViewController.m in Sources */,
+				88C4BB961CB2A90300142957 /* LikeButton.m in Sources */,
+				888A26081CAA4FAD00793183 /* DataSource.m in Sources */,
+				8891AC001CB2E5F5001ACD47 /* ComposeCommentView.m in Sources */,
 				888A25871CA8A1EA00793183 /* main.m in Sources */,
+				8891AC1B1CB4B46E001ACD47 /* LibraryCollectionViewCell.m in Sources */,
+				8891AC061CB2F0B9001ACD47 /* CameraViewController.m in Sources */,
+				8891AC091CB2F31C001ACD47 /* UIImage+ImageUtilities.m in Sources */,
+				8819A2DE1CB4CEA3006E333B /* UserTests.m in Sources */,
+				888A25FC1CA9B6DE00793183 /* ImagesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		888A258E1CA8A1EA00793183 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				888A258F1CA8A1EA00793183 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		888A25931CA8A1EA00793183 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,6 +495,7 @@
 		};
 		888A259A1CA8A1EA00793183 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3E9066A261EFA6DF85A357 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
@@ -274,6 +507,7 @@
 		};
 		888A259B1CA8A1EA00793183 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487F6869195A3552C3BEA289 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
@@ -302,6 +536,7 @@
 				888A259B1CA8A1EA00793183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
